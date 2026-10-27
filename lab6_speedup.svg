@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="450" viewBox="0 0 720 450">
+<rect width="100%" height="100%" fill="white"/>
+<text x="360" y="24" text-anchor="middle" font-family="sans-serif" font-size="18">Lab 6 speedup vs. thread count</text>
+<line x1="70" y1="385" x2="690" y2="385" stroke="#dddddd"/>
+<text x="60" y="390" text-anchor="end" font-family="sans-serif" font-size="12">0</text>
+<line x1="70" y1="341" x2="690" y2="341" stroke="#dddddd"/>
+<text x="60" y="346" text-anchor="end" font-family="sans-serif" font-size="12">1</text>
+<line x1="70" y1="298" x2="690" y2="298" stroke="#dddddd"/>
+<text x="60" y="303" text-anchor="end" font-family="sans-serif" font-size="12">2</text>
+<line x1="70" y1="255" x2="690" y2="255" stroke="#dddddd"/>
+<text x="60" y="260" text-anchor="end" font-family="sans-serif" font-size="12">3</text>
+<line x1="70" y1="212" x2="690" y2="212" stroke="#dddddd"/>
+<text x="60" y="217" text-anchor="end" font-family="sans-serif" font-size="12">4</text>
+<line x1="70" y1="169" x2="690" y2="169" stroke="#dddddd"/>
+<text x="60" y="174" text-anchor="end" font-family="sans-serif" font-size="12">5</text>
+<line x1="70" y1="126" x2="690" y2="126" stroke="#dddddd"/>
+<text x="60" y="131" text-anchor="end" font-family="sans-serif" font-size="12">6</text>
+<line x1="70" y1="83" x2="690" y2="83" stroke="#dddddd"/>
+<text x="60" y="88" text-anchor="end" font-family="sans-serif" font-size="12">7</text>
+<line x1="70" y1="40" x2="690" y2="40" stroke="#dddddd"/>
+<text x="60" y="45" text-anchor="end" font-family="sans-serif" font-size="12">8</text>
+<line x1="70" y1="40" x2="70" y2="385" stroke="black"/>
+<line x1="70" y1="385" x2="690" y2="385" stroke="black"/>
+<polyline fill="none" stroke="#999999" stroke-width="2" stroke-dasharray="6 4" points="70,341 225,298 380,255 535,212 690,40"/>
+<polyline fill="none" stroke="#1769aa" stroke-width="3" points="70,341 225,312 380,283 535,240 690,278"/>
+<circle cx="70" cy="341" r="4" fill="#1769aa"/>
+<text x="70" y="407" text-anchor="middle" font-family="sans-serif" font-size="12">1</text>
+<circle cx="225" cy="312" r="4" fill="#1769aa"/>
+<text x="225" y="407" text-anchor="middle" font-family="sans-serif" font-size="12">2</text>
+<circle cx="380" cy="283" r="4" fill="#1769aa"/>
+<text x="380" y="407" text-anchor="middle" font-family="sans-serif" font-size="12">3</text>
+<circle cx="535" cy="240" r="4" fill="#1769aa"/>
+<text x="535" y="407" text-anchor="middle" font-family="sans-serif" font-size="12">4</text>
+<circle cx="690" cy="278" r="4" fill="#1769aa"/>
+<text x="690" y="407" text-anchor="middle" font-family="sans-serif" font-size="12">8</text>
+<text x="360" y="434" text-anchor="middle" font-family="sans-serif" font-size="13">Threads</text>
+<text x="18" y="225" transform="rotate(-90 18 225)" text-anchor="middle" font-family="sans-serif" font-size="13">Speedup</text>
+<line x1="530" y1="50" x2="560" y2="50" stroke="#1769aa" stroke-width="3"/>
+<text x="570" y="54" font-family="sans-serif" font-size="12">Measured</text>
+<line x1="530" y1="70" x2="560" y2="70" stroke="#999999" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="570" y="74" font-family="sans-serif" font-size="12">Ideal</text>
+</svg>

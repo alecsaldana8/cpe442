@@ -8,8 +8,10 @@ OPENCV_LIBS := $(shell pkg-config --libs $(OPENCV_PKG) 2>/dev/null)
 CPPFLAGS := -std=c++17 -Wall -Wextra $(OPENCV_CFLAGS)
 LDFLAGS := $(OPENCV_LIBS)
 LAB5FLAGS ?= -O0
+LAB6FLAGS ?= -O3
+THREAD_FLAGS := -pthread
 
-.PHONY: all clean lab4 lab5-o0 lab5-o3-novec lab5-o3 lab5-native baseline-o3 asm-o0 asm-o3-novec asm-o3 asm-native
+.PHONY: all clean lab4 lab6 lab5-o0 lab5-o3-novec lab5-o3 lab5-native baseline-o3 asm-o0 asm-o3-novec asm-o3 asm-native
 
 all: lab5 lab4
 
@@ -18,6 +20,9 @@ lab4: lab4.cpp
 
 lab5: lab5.cpp
 	$(CXX) $(CPPFLAGS) $(LAB5FLAGS) -o $@ $< $(LDFLAGS)
+
+lab6: lab6.cpp
+	$(CXX) $(CPPFLAGS) $(LAB6FLAGS) $(THREAD_FLAGS) -o $@ $< $(LDFLAGS) $(THREAD_FLAGS)
 
 lab5-o0: lab5.cpp
 	$(CXX) $(CPPFLAGS) -O0 -o $@ $< $(LDFLAGS)
@@ -47,4 +52,4 @@ asm-native: lab5.cpp
 	$(CXX) $(CPPFLAGS) -O3 -march=native -S -fverbose-asm -o lab5-native.s $<
 
 clean:
-	rm -f lab4 lab5 lab5-o0 lab5-o3-novec lab5-o3 lab5-native lab2-o3 lab5-o0.s lab5-o3-novec.s lab5-o3.s lab5-native.s
+	rm -f lab4 lab5 lab6 lab5-o0 lab5-o3-novec lab5-o3 lab5-native lab2-o3 lab5-o0.s lab5-o3-novec.s lab5-o3.s lab5-native.s
